@@ -1,0 +1,39 @@
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: example1-hpa
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: example1
+  minReplicas: 1
+  maxReplicas: 10
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: 50
+  behavior:
+    scaleUp:
+      stabilizationWindowSeconds: 0
+      selectPolicy: Max # Default is Max. Max: choose the policy that allows the biggest change (faster); Min: choose the policy that allows the smallest change (slower)
+#      policies:
+#        - type: Percent
+#          value: 100        # up to +100% per minute (double)
+#          periodSeconds: 60
+#        - type: Pods
+#          value: 4          # or at most +4 per minute
+#          periodSeconds: 60
+    scaleDown:
+      stabilizationWindowSeconds: 5
+      selectPolicy: Max
+#      policies:
+#        - type: Percent
+#          value: 20         # shrink slowly
+#          periodSeconds: 60
+#        - type: Pods
+#          value: 1
+#          periodSeconds: 60

@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: example2
+  labels:
+    app: example2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: example2
+  template:
+    metadata:
+      labels:
+        app: example2
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:latest
+          ports:
+            - name: http
+              containerPort: 80
+          resources:
+            requests:              # The scheduler uses requests to decide which node has enough capacity to place the pod.
+              cpu: 100m            # 0.1 CPU core (100 millicores)
+              memory: 128Mi        # 128 MiB
+            limits:                # The maximum the container is allowed to use.
+              cpu: 500m            # 0.5 CPU core (500 millicores)
+              memory: 256Mi        # 256 MiB

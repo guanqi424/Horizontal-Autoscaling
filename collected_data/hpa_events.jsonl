@@ -1,0 +1,620 @@
+{
+    "apiVersion": "v1",
+    "count": 3,
+    "eventTime": null,
+    "firstTimestamp": "2026-02-05T05:54:09Z",
+    "involvedObject": {
+        "apiVersion": "autoscaling/v2",
+        "kind": "HorizontalPodAutoscaler",
+        "name": "example1-hpa",
+        "namespace": "default",
+        "resourceVersion": "1473",
+        "uid": "9e7607e9-d060-44d4-8eca-54194e8507b4"
+    },
+    "kind": "Event",
+    "lastTimestamp": "2026-02-05T06:03:55Z",
+    "message": "New size: 4; reason: cpu resource utilization (percentage of request) above target",
+    "metadata": {
+        "creationTimestamp": "2026-02-05T05:54:09Z",
+        "name": "example1-hpa.189143f53e196802",
+        "namespace": "default",
+        "resourceVersion": "2555",
+        "uid": "e4fc4440-2cfd-4ca4-b2d1-258fdd3f8635"
+    },
+    "reason": "SuccessfulRescale",
+    "reportingComponent": "horizontal-pod-autoscaler",
+    "reportingInstance": "",
+    "source": {
+        "component": "horizontal-pod-autoscaler"
+    },
+    "type": "Normal"
+}
+{
+    "apiVersion": "v1",
+    "count": 1,
+    "eventTime": null,
+    "firstTimestamp": "2026-02-05T05:54:39Z",
+    "involvedObject": {
+        "apiVersion": "autoscaling/v2",
+        "kind": "HorizontalPodAutoscaler",
+        "name": "example1-hpa",
+        "namespace": "default",
+        "resourceVersion": "1568",
+        "uid": "9e7607e9-d060-44d4-8eca-54194e8507b4"
+    },
+    "kind": "Event",
+    "lastTimestamp": "2026-02-05T05:54:39Z",
+    "message": "New size: 5; reason: cpu resource utilization (percentage of request) above target",
+    "metadata": {
+        "creationTimestamp": "2026-02-05T05:54:39Z",
+        "name": "example1-hpa.189143fc3f916d72",
+        "namespace": "default",
+        "resourceVersion": "1589",
+        "uid": "78bba3d0-a760-49b0-ad38-8258e2fa11ea"
+    },
+    "reason": "SuccessfulRescale",
+    "reportingComponent": "horizontal-pod-autoscaler",
+    "reportingInstance": "",
+    "source": {
+        "component": "horizontal-pod-autoscaler"
+    },
+    "type": "Normal"
+}
+{
+    "apiVersion": "v1",
+    "count": 2,
+    "eventTime": null,
+    "firstTimestamp": "2026-02-05T05:55:24Z",
+    "involvedObject": {
+        "apiVersion": "autoscaling/v2",
+        "kind": "HorizontalPodAutoscaler",
+        "name": "example1-hpa",
+        "namespace": "default",
+        "resourceVersion": "1653",
+        "uid": "9e7607e9-d060-44d4-8eca-54194e8507b4"
+    },
+    "kind": "Event",
+    "lastTimestamp": "2026-02-05T06:04:10Z",
+    "message": "New size: 6; reason: cpu resource utilization (percentage of request) above target",
+    "metadata": {
+        "creationTimestamp": "2026-02-05T05:55:24Z",
+        "name": "example1-hpa.18914406c1c775f1",
+        "namespace": "default",
+        "resourceVersion": "2613",
+        "uid": "b649a29d-f550-4b09-976e-18003a83addb"
+    },
+    "reason": "SuccessfulRescale",
+    "reportingComponent": "horizontal-pod-autoscaler",
+    "reportingInstance": "",
+    "source": {
+        "component": "horizontal-pod-autoscaler"
+    },
+    "type": "Normal"
+}
+{
+    "apiVersion": "v1",
+    "count": 1,
+    "eventTime": null,
+    "firstTimestamp": "2026-02-05T05:57:09Z",
+    "involvedObject": {
+        "apiVersion": "autoscaling/v2",
+        "kind": "HorizontalPodAutoscaler",
+        "name": "example1-hpa",
+        "namespace": "default",
+        "resourceVersion": "1821",
+        "uid": "9e7607e9-d060-44d4-8eca-54194e8507b4"
+    },
+    "kind": "Event",
+    "lastTimestamp": "2026-02-05T05:57:09Z",
+    "message": "New size: 5; reason: All metrics below target",
+    "metadata": {
+        "creationTimestamp": "2026-02-05T05:57:09Z",
+        "name": "example1-hpa.1891441f4768f660",
+        "namespace": "default",
+        "resourceVersion": "1843",
+        "uid": "bfbea14f-12cd-475c-8d6a-8e8f69f29896"
+    },
+    "reason": "SuccessfulRescale",
+    "reportingComponent": "horizontal-pod-autoscaler",
+    "reportingInstance": "",
+    "source": {
+        "component": "horizontal-pod-autoscaler"
+    },
+    "type": "Normal"
+}
+{
+    "apiVersion": "v1",
+    "count": 1,
+    "eventTime": null,
+    "firstTimestamp": "2026-02-05T05:57:14Z",
+    "involvedObject": {
+        "apiVersion": "autoscaling/v2",
+        "kind": "HorizontalPodAutoscaler",
+        "name": "example1-hpa",
+        "namespace": "default",
+        "resourceVersion": "1842",
+        "uid": "9e7607e9-d060-44d4-8eca-54194e8507b4"
+    },
+    "kind": "Event",
+    "lastTimestamp": "2026-02-05T05:57:14Z",
+    "message": "New size: 4; reason: All metrics below target",
+    "metadata": {
+        "creationTimestamp": "2026-02-05T05:57:14Z",
+        "name": "example1-hpa.1891442072b3eace",
+        "namespace": "default",
+        "resourceVersion": "1870",
+        "uid": "c253eadd-618f-4735-8ee7-e4099efffad4"
+    },
+    "reason": "SuccessfulRescale",
+    "reportingComponent": "horizontal-pod-autoscaler",
+    "reportingInstance": "",
+    "source": {
+        "component": "horizontal-pod-autoscaler"
+    },
+    "type": "Normal"
+}
+{
+    "apiVersion": "v1",
+    "count": 2,
+    "eventTime": null,
+    "firstTimestamp": "2026-02-05T05:57:19Z",
+    "involvedObject": {
+        "apiVersion": "autoscaling/v2",
+        "kind": "HorizontalPodAutoscaler",
+        "name": "example1-hpa",
+        "namespace": "default",
+        "resourceVersion": "1871",
+        "uid": "9e7607e9-d060-44d4-8eca-54194e8507b4"
+    },
+    "kind": "Event",
+    "lastTimestamp": "2026-02-05T05:57:54Z",
+    "message": "New size: 3; reason: All metrics below target",
+    "metadata": {
+        "creationTimestamp": "2026-02-05T05:57:19Z",
+        "name": "example1-hpa.189144219db4fe0a",
+        "namespace": "default",
+        "resourceVersion": "1995",
+        "uid": "8598a1b9-c2ce-4799-8e1f-55b4ed781524"
+    },
+    "reason": "SuccessfulRescale",
+    "reportingComponent": "horizontal-pod-autoscaler",
+    "reportingInstance": "",
+    "source": {
+        "component": "horizontal-pod-autoscaler"
+    },
+    "type": "Normal"
+}
+{
+    "apiVersion": "v1",
+    "count": 4,
+    "eventTime": null,
+    "firstTimestamp": "2026-02-05T05:58:09Z",
+    "involvedObject": {
+        "apiVersion": "autoscaling/v2",
+        "kind": "HorizontalPodAutoscaler",
+        "name": "example1-hpa",
+        "namespace": "default",
+        "resourceVersion": "2021",
+        "uid": "9e7607e9-d060-44d4-8eca-54194e8507b4"
+    },
+    "kind": "Event",
+    "lastTimestamp": "2026-02-05T06:20:23Z",
+    "message": "New size: 1; reason: All metrics below target",
+    "metadata": {
+        "creationTimestamp": "2026-02-05T05:58:09Z",
+        "name": "example1-hpa.1891442d4bd7fdf5",
+        "namespace": "default",
+        "resourceVersion": "4066",
+        "uid": "7447bc35-3641-4f0d-a5e8-a09ffb1c9f44"
+    },
+    "reason": "SuccessfulRescale",
+    "reportingComponent": "horizontal-pod-autoscaler",
+    "reportingInstance": "",
+    "source": {
+        "component": "horizontal-pod-autoscaler"
+    },
+    "type": "Normal"
+}
+{
+    "apiVersion": "v1",
+    "count": 3,
+    "eventTime": null,
+    "firstTimestamp": "2026-02-05T06:03:40Z",
+    "involvedObject": {
+        "apiVersion": "autoscaling/v2",
+        "kind": "HorizontalPodAutoscaler",
+        "name": "example1-hpa",
+        "namespace": "default",
+        "resourceVersion": "2075",
+        "uid": "9e7607e9-d060-44d4-8eca-54194e8507b4"
+    },
+    "kind": "Event",
+    "lastTimestamp": "2026-02-05T06:19:22Z",
+    "message": "New size: 2; reason: cpu resource utilization (percentage of request) above target",
+    "metadata": {
+        "creationTimestamp": "2026-02-05T06:03:40Z",
+        "name": "example1-hpa.1891447a550708d1",
+        "namespace": "default",
+        "resourceVersion": "3960",
+        "uid": "03d8f548-c169-4b61-b6c0-b8fbfcd2faf2"
+    },
+    "reason": "SuccessfulRescale",
+    "reportingComponent": "horizontal-pod-autoscaler",
+    "reportingInstance": "",
+    "source": {
+        "component": "horizontal-pod-autoscaler"
+    },
+    "type": "Normal"
+}
+{
+    "apiVersion": "v1",
+    "count": 1,
+    "eventTime": null,
+    "firstTimestamp": "2026-02-05T06:40:10Z",
+    "involvedObject": {
+        "apiVersion": "autoscaling/v2",
+        "kind": "HorizontalPodAutoscaler",
+        "name": "example1-hpa",
+        "namespace": "default",
+        "resourceVersion": "4599",
+        "uid": "9e7607e9-d060-44d4-8eca-54194e8507b4"
+    },
+    "kind": "Event",
+    "lastTimestamp": "2026-02-05T06:40:10Z",
+    "message": "New size: 3; reason: cpu resource utilization (percentage of request) above target",
+    "metadata": {
+        "creationTimestamp": "2026-02-05T06:40:10Z",
+        "name": "example1-hpa.1891467838e7dfc9",
+        "namespace": "default",
+        "resourceVersion": "5645",
+        "uid": "38d6690f-b34d-4bd4-820f-2072de05dc0a"
+    },
+    "reason": "SuccessfulRescale",
+    "reportingComponent": "horizontal-pod-autoscaler",
+    "reportingInstance": "",
+    "source": {
+        "component": "horizontal-pod-autoscaler"
+    },
+    "type": "Normal"
+}
+{
+    "apiVersion": "v1",
+    "count": 1,
+    "eventTime": null,
+    "firstTimestamp": "2026-02-05T06:40:40Z",
+    "involvedObject": {
+        "apiVersion": "autoscaling/v2",
+        "kind": "HorizontalPodAutoscaler",
+        "name": "example1-hpa",
+        "namespace": "default",
+        "resourceVersion": "5703",
+        "uid": "9e7607e9-d060-44d4-8eca-54194e8507b4"
+    },
+    "kind": "Event",
+    "lastTimestamp": "2026-02-05T06:40:40Z",
+    "message": "New size: 7; reason: cpu resource utilization (percentage of request) above target",
+    "metadata": {
+        "creationTimestamp": "2026-02-05T06:40:40Z",
+        "name": "example1-hpa.1891467f3ae57d94",
+        "namespace": "default",
+        "resourceVersion": "5724",
+        "uid": "f072eab4-358e-4b7d-9f84-2c6204d7e08c"
+    },
+    "reason": "SuccessfulRescale",
+    "reportingComponent": "horizontal-pod-autoscaler",
+    "reportingInstance": "",
+    "source": {
+        "component": "horizontal-pod-autoscaler"
+    },
+    "type": "Normal"
+}
+{
+    "apiVersion": "v1",
+    "count": 1,
+    "eventTime": null,
+    "firstTimestamp": "2026-02-05T06:41:25Z",
+    "involvedObject": {
+        "apiVersion": "autoscaling/v2",
+        "kind": "HorizontalPodAutoscaler",
+        "name": "example1-hpa",
+        "namespace": "default",
+        "resourceVersion": "5830",
+        "uid": "9e7607e9-d060-44d4-8eca-54194e8507b4"
+    },
+    "kind": "Event",
+    "lastTimestamp": "2026-02-05T06:41:25Z",
+    "message": "New size: 6; reason: All metrics below target",
+    "metadata": {
+        "creationTimestamp": "2026-02-05T06:41:25Z",
+        "name": "example1-hpa.18914689bcdb756b",
+        "namespace": "default",
+        "resourceVersion": "5854",
+        "uid": "6c7c6a71-93eb-4989-83f8-9a868456e609"
+    },
+    "reason": "SuccessfulRescale",
+    "reportingComponent": "horizontal-pod-autoscaler",
+    "reportingInstance": "",
+    "source": {
+        "component": "horizontal-pod-autoscaler"
+    },
+    "type": "Normal"
+}
+{
+    "apiVersion": "v1",
+    "count": 2,
+    "eventTime": null,
+    "firstTimestamp": "2026-02-05T05:57:09Z",
+    "involvedObject": {
+        "apiVersion": "autoscaling/v2",
+        "kind": "HorizontalPodAutoscaler",
+        "name": "example1-hpa",
+        "namespace": "default",
+        "resourceVersion": "1821",
+        "uid": "9e7607e9-d060-44d4-8eca-54194e8507b4"
+    },
+    "kind": "Event",
+    "lastTimestamp": "2026-02-05T06:41:30Z",
+    "message": "New size: 5; reason: All metrics below target",
+    "metadata": {
+        "creationTimestamp": "2026-02-05T05:57:09Z",
+        "name": "example1-hpa.1891441f4768f660",
+        "namespace": "default",
+        "resourceVersion": "5881",
+        "uid": "bfbea14f-12cd-475c-8d6a-8e8f69f29896"
+    },
+    "reason": "SuccessfulRescale",
+    "reportingComponent": "horizontal-pod-autoscaler",
+    "reportingInstance": "",
+    "source": {
+        "component": "horizontal-pod-autoscaler"
+    },
+    "type": "Normal"
+}
+{
+    "apiVersion": "v1",
+    "count": 2,
+    "eventTime": null,
+    "firstTimestamp": "2026-02-05T05:57:14Z",
+    "involvedObject": {
+        "apiVersion": "autoscaling/v2",
+        "kind": "HorizontalPodAutoscaler",
+        "name": "example1-hpa",
+        "namespace": "default",
+        "resourceVersion": "1842",
+        "uid": "9e7607e9-d060-44d4-8eca-54194e8507b4"
+    },
+    "kind": "Event",
+    "lastTimestamp": "2026-02-05T06:41:35Z",
+    "message": "New size: 4; reason: All metrics below target",
+    "metadata": {
+        "creationTimestamp": "2026-02-05T05:57:14Z",
+        "name": "example1-hpa.1891442072b3eace",
+        "namespace": "default",
+        "resourceVersion": "5909",
+        "uid": "c253eadd-618f-4735-8ee7-e4099efffad4"
+    },
+    "reason": "SuccessfulRescale",
+    "reportingComponent": "horizontal-pod-autoscaler",
+    "reportingInstance": "",
+    "source": {
+        "component": "horizontal-pod-autoscaler"
+    },
+    "type": "Normal"
+}
+{
+    "apiVersion": "v1",
+    "count": 2,
+    "eventTime": null,
+    "firstTimestamp": "2026-02-05T05:54:39Z",
+    "involvedObject": {
+        "apiVersion": "autoscaling/v2",
+        "kind": "HorizontalPodAutoscaler",
+        "name": "example1-hpa",
+        "namespace": "default",
+        "resourceVersion": "1568",
+        "uid": "9e7607e9-d060-44d4-8eca-54194e8507b4"
+    },
+    "kind": "Event",
+    "lastTimestamp": "2026-02-05T06:41:56Z",
+    "message": "New size: 5; reason: cpu resource utilization (percentage of request) above target",
+    "metadata": {
+        "creationTimestamp": "2026-02-05T05:54:39Z",
+        "name": "example1-hpa.189143fc3f916d72",
+        "namespace": "default",
+        "resourceVersion": "5956",
+        "uid": "78bba3d0-a760-49b0-ad38-8258e2fa11ea"
+    },
+    "reason": "SuccessfulRescale",
+    "reportingComponent": "horizontal-pod-autoscaler",
+    "reportingInstance": "",
+    "source": {
+        "component": "horizontal-pod-autoscaler"
+    },
+    "type": "Normal"
+}
+{
+    "apiVersion": "v1",
+    "count": 2,
+    "eventTime": null,
+    "firstTimestamp": "2026-02-05T06:40:40Z",
+    "involvedObject": {
+        "apiVersion": "autoscaling/v2",
+        "kind": "HorizontalPodAutoscaler",
+        "name": "example1-hpa",
+        "namespace": "default",
+        "resourceVersion": "5703",
+        "uid": "9e7607e9-d060-44d4-8eca-54194e8507b4"
+    },
+    "kind": "Event",
+    "lastTimestamp": "2026-02-05T06:42:41Z",
+    "message": "New size: 7; reason: cpu resource utilization (percentage of request) above target",
+    "metadata": {
+        "creationTimestamp": "2026-02-05T06:40:40Z",
+        "name": "example1-hpa.1891467f3ae57d94",
+        "namespace": "default",
+        "resourceVersion": "6040",
+        "uid": "f072eab4-358e-4b7d-9f84-2c6204d7e08c"
+    },
+    "reason": "SuccessfulRescale",
+    "reportingComponent": "horizontal-pod-autoscaler",
+    "reportingInstance": "",
+    "source": {
+        "component": "horizontal-pod-autoscaler"
+    },
+    "type": "Normal"
+}
+{
+    "apiVersion": "v1",
+    "count": 2,
+    "eventTime": null,
+    "firstTimestamp": "2026-02-05T06:41:25Z",
+    "involvedObject": {
+        "apiVersion": "autoscaling/v2",
+        "kind": "HorizontalPodAutoscaler",
+        "name": "example1-hpa",
+        "namespace": "default",
+        "resourceVersion": "5830",
+        "uid": "9e7607e9-d060-44d4-8eca-54194e8507b4"
+    },
+    "kind": "Event",
+    "lastTimestamp": "2026-02-05T06:43:11Z",
+    "message": "New size: 6; reason: All metrics below target",
+    "metadata": {
+        "creationTimestamp": "2026-02-05T06:41:25Z",
+        "name": "example1-hpa.18914689bcdb756b",
+        "namespace": "default",
+        "resourceVersion": "6115",
+        "uid": "6c7c6a71-93eb-4989-83f8-9a868456e609"
+    },
+    "reason": "SuccessfulRescale",
+    "reportingComponent": "horizontal-pod-autoscaler",
+    "reportingInstance": "",
+    "source": {
+        "component": "horizontal-pod-autoscaler"
+    },
+    "type": "Normal"
+}
+{
+    "apiVersion": "v1",
+    "count": 3,
+    "eventTime": null,
+    "firstTimestamp": "2026-02-05T05:57:09Z",
+    "involvedObject": {
+        "apiVersion": "autoscaling/v2",
+        "kind": "HorizontalPodAutoscaler",
+        "name": "example1-hpa",
+        "namespace": "default",
+        "resourceVersion": "1821",
+        "uid": "9e7607e9-d060-44d4-8eca-54194e8507b4"
+    },
+    "kind": "Event",
+    "lastTimestamp": "2026-02-05T06:43:16Z",
+    "message": "New size: 5; reason: All metrics below target",
+    "metadata": {
+        "creationTimestamp": "2026-02-05T05:57:09Z",
+        "name": "example1-hpa.1891441f4768f660",
+        "namespace": "default",
+        "resourceVersion": "6145",
+        "uid": "bfbea14f-12cd-475c-8d6a-8e8f69f29896"
+    },
+    "reason": "SuccessfulRescale",
+    "reportingComponent": "horizontal-pod-autoscaler",
+    "reportingInstance": "",
+    "source": {
+        "component": "horizontal-pod-autoscaler"
+    },
+    "type": "Normal"
+}
+{
+    "apiVersion": "v1",
+    "count": 3,
+    "eventTime": null,
+    "firstTimestamp": "2026-02-05T05:55:24Z",
+    "involvedObject": {
+        "apiVersion": "autoscaling/v2",
+        "kind": "HorizontalPodAutoscaler",
+        "name": "example1-hpa",
+        "namespace": "default",
+        "resourceVersion": "1653",
+        "uid": "9e7607e9-d060-44d4-8eca-54194e8507b4"
+    },
+    "kind": "Event",
+    "lastTimestamp": "2026-02-05T06:44:11Z",
+    "message": "New size: 6; reason: cpu resource utilization (percentage of request) above target",
+    "metadata": {
+        "creationTimestamp": "2026-02-05T05:55:24Z",
+        "name": "example1-hpa.18914406c1c775f1",
+        "namespace": "default",
+        "resourceVersion": "6242",
+        "uid": "b649a29d-f550-4b09-976e-18003a83addb"
+    },
+    "reason": "SuccessfulRescale",
+    "reportingComponent": "horizontal-pod-autoscaler",
+    "reportingInstance": "",
+    "source": {
+        "component": "horizontal-pod-autoscaler"
+    },
+    "type": "Normal"
+}
+{
+    "apiVersion": "v1",
+    "count": 1,
+    "eventTime": null,
+    "firstTimestamp": "2026-02-05T06:45:06Z",
+    "involvedObject": {
+        "apiVersion": "autoscaling/v2",
+        "kind": "HorizontalPodAutoscaler",
+        "name": "example1-hpa",
+        "namespace": "default",
+        "resourceVersion": "6322",
+        "uid": "9e7607e9-d060-44d4-8eca-54194e8507b4"
+    },
+    "kind": "Event",
+    "lastTimestamp": "2026-02-05T06:45:06Z",
+    "message": "New size: 2; reason: All metrics below target",
+    "metadata": {
+        "creationTimestamp": "2026-02-05T06:45:06Z",
+        "name": "example1-hpa.189146bd1fa89a4f",
+        "namespace": "default",
+        "resourceVersion": "6346",
+        "uid": "fba2a615-4c4c-4aed-bd08-287e9cafeca1"
+    },
+    "reason": "SuccessfulRescale",
+    "reportingComponent": "horizontal-pod-autoscaler",
+    "reportingInstance": "",
+    "source": {
+        "component": "horizontal-pod-autoscaler"
+    },
+    "type": "Normal"
+}
+{
+    "apiVersion": "v1",
+    "count": 5,
+    "eventTime": null,
+    "firstTimestamp": "2026-02-05T05:58:09Z",
+    "involvedObject": {
+        "apiVersion": "autoscaling/v2",
+        "kind": "HorizontalPodAutoscaler",
+        "name": "example1-hpa",
+        "namespace": "default",
+        "resourceVersion": "2021",
+        "uid": "9e7607e9-d060-44d4-8eca-54194e8507b4"
+    },
+    "kind": "Event",
+    "lastTimestamp": "2026-02-05T06:45:11Z",
+    "message": "New size: 1; reason: All metrics below target",
+    "metadata": {
+        "creationTimestamp": "2026-02-05T05:58:09Z",
+        "name": "example1-hpa.1891442d4bd7fdf5",
+        "namespace": "default",
+        "resourceVersion": "6402",
+        "uid": "7447bc35-3641-4f0d-a5e8-a09ffb1c9f44"
+    },
+    "reason": "SuccessfulRescale",
+    "reportingComponent": "horizontal-pod-autoscaler",
+    "reportingInstance": "",
+    "source": {
+        "component": "horizontal-pod-autoscaler"
+    },
+    "type": "Normal"
+}

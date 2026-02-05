@@ -1,0 +1,21 @@
+apiVersion: k3d.io/v1alpha5
+kind: Simple
+metadata:
+  name: k3sTest
+servers: 1
+agents: 0
+ports:
+  # hostPort 81  -->  nodePort 30080 on the (only) server node
+  - port: "81:30090"
+    nodeFilters:
+      - "server:0"
+options:
+  k3s:
+    extraArgs:
+      - arg: "--kube-controller-manager-arg=horizontal-pod-autoscaler-sync-period=5s"
+        nodeFilters:
+          - "server:0"
+      # optional: reduce global scale-down stabilization (default is 5m)
+      # - arg: "--kube-controller-manager-arg=horizontal-pod-autoscaler-downscale-stabilization=60s"
+      #   nodeFilters:
+      #     - "server:0"

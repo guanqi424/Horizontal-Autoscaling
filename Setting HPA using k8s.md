@@ -69,7 +69,7 @@ name: cluster
 nodes:
   - role: control-plane
     extraPortMappings:
-      - containerPort: 30080
+      - containerPort: 30060
         hostPort: 80
         listenAddress: "0.0.0.0"
         protocol: TCP
@@ -165,7 +165,7 @@ spec:
     - protocol: TCP
       targetPort: 80
       port: 80
-      nodePort: 30080
+      nodePort: 30060
 ```
 
 Run this command:
@@ -174,7 +174,7 @@ Run this command:
 kubectl apply -f ./deploy_config/service.k8s.yaml
 ```
 
-After completion, visit: [http://localhost/](http://localhost/) , you can see nginx service running.
+After completion, visit: [http://localhost:8080](http://localhost:8080) , you can see nginx service running.
 
 You can also check via running the following command to see more details:
 
@@ -187,29 +187,7 @@ kubectl get services
 Install Metrics Server(every time you create a new cluster):
 
 ```bash
-kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
-```
-
-or :
-
-```bash
 kubectl apply -f ./metricsServer_config/metrics_service.yaml
-```
-
-when finished run this command:
-
-```bash
-kubectl -n kube-system rollout status deploy/metrics-server
-```
-
-For my case, I need a little fix. Open up a new terminal window and run :
-
-```bash
-kubectl -n kube-system patch deployment metrics-server --type='json' -p='[
-  {"op":"add","path":"/spec/template/spec/containers/0/args/-","value":"--kubelet-insecure-tls"},
-  {"op":"add","path":"/spec/template/spec/containers/0/args/-","value":"--kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname"}
-]'
-kubectl -n kube-system rollout restart deploy/metrics-server
 kubectl -n kube-system rollout status deploy/metrics-server
 ```
 

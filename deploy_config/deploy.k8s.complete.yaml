@@ -1,0 +1,101 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ labels:
+   app: cpu-nginx
+ name: cpu-nginx
+spec:
+ replicas: 1
+ selector:
+   matchLabels:
+     app: cpu-nginx
+ template:
+   metadata:
+     labels:
+       app: cpu-nginx
+   spec:
+     containers:
+     - image: cpu-nginx:0.1
+       name: cpu-nginx
+       imagePullPolicy: IfNotPresent
+       resources:
+         requests:              # The scheduler uses requests to decide which node has enough capacity to place the pod.
+           cpu: 100m            # 0.1 CPU core (100 millicores)
+           memory: 128Mi        # 128 MiB
+         limits:                # The maximum the container is allowed to use.
+           cpu: 500m            # 0.5 CPU core (500 millicores)
+           memory: 256Mi        # 256 MiB
+       ports:
+       - containerPort: 80
+       - containerPort: 8080
+       - containerPort: 8081
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: cpu-nginx
+  labels:
+    app: cpu-nginx
+spec:
+  type: NodePort
+  selector:
+    app: cpu-nginx
+  ports:
+    - name: web
+      protocol: TCP
+      targetPort: 80
+      port: 80
+      nodePort: 30060
+    - name: work
+      protocol: TCP
+      targetPort: 8081
+      port: 8081
+      nodePort: 30070
+    - name: burn
+      protocol: TCP
+      targetPort: 8082
+      port: 8082
+      nodePort: 30071
+
+---
+
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: cpu-nginx-hpa
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cpu-nginx
+  minReplicas: 1
+  maxReplicas: 10
+  metrics:
+    - type: Resource
+      resource:
+        name: cpu
+        target:
+          type: Utilization
+          averageUtilization: 50
+  behavior:
+    scaleUp:
+      stabilizationWindowSeconds: 0
+      selectPolicy: Max # Default is Max. Max: choose the policy that allows the biggest change (faster); Min: choose the policy that allows the smallest change (slower)
+    #      policies:
+    #        - type: Percent
+    #          value: 100        # up to +100% per minute (double)
+    #          periodSeconds: 60
+    #        - type: Pods
+    #          value: 4          # or at most +4 per minute
+    #          periodSeconds: 60
+    scaleDown:
+      stabilizationWindowSeconds: 5
+      selectPolicy: Max
+#      policies:
+#        - type: Percent
+#          value: 20         # shrink slowly
+#          periodSeconds: 60
+#        - type: Pods
+#          value: 1
+#          periodSeconds: 60

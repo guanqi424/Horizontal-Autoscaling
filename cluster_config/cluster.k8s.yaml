@@ -4,10 +4,19 @@ name: cluster
 nodes:
   - role: control-plane
     extraPortMappings:
-      - containerPort: 30080
-        hostPort: 80
+      - containerPort: 30060
+        hostPort: 8080
         listenAddress: "0.0.0.0"
         protocol: TCP
+      - containerPort: 30070
+        hostPort: 8081
+        listenAddress: "0.0.0.0"
+        protocol: TCP
+      - containerPort: 30071
+        hostPort: 8082
+        listenAddress: "0.0.0.0"
+        protocol: TCP
+
     kubeadmConfigPatches:
       - |
         kind: ClusterConfiguration
